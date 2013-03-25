@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<%= render :partial => "layouts/head" %>
+
+</head>
+<body>
+  <!--<div class = "row"><%= @peticiones %></div>-->
+  <%= @peticiones %>
+	<!--Contenedor-->
+	<div id="container">
+
+	<!--Cabecera-->
+	<%= render :partial => "layouts/cabecera" %>
+    <!--Final Cabecera-->
+    </header>
+
+    <!--Cabecera intro-->
+
+    <!--start intro-->
+    <% if hay_banner? %>
+    <%= yield :imagen %>
+    <% else %>
+   <%= render :partial => "layouts/intro" %>
+   <!--end holder-->
+   <% end %>
+   </div>
+   <!--end container-->
+    
+
+    
+    <!--Empieza contenido dinamico-->
+    <div class = "holder_content1">
+    	<section class = "group6">
+    		<%= yield %>
+    	</section>
+    </div>
+
+   <!--start footer-->
+   <footer>
+      <div class="container">  
+         <div id="FooterTwo"> Probando con Ruby on Rails </div>
+         <div id="FooterTree"> Válido en html5  <a href="http://www.google.com.uy">google</a> </div> 
+      </div>
+   </footer>
+   <!--end footer-->
+   </div>
+   <!--end bg-->
+   <!-- Free template distributed by http://freehtml5templates.com -->
+  </body>
+</html>
+

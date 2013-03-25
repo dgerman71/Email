@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <%= render :partial => "layouts/head" %>
+</head>
+<body>
+  <!--Contenedor-->
+  <div id="container">
+
+  <!--Cabecera-->
+  <%= render :partial => "layouts/cabecera" %>
+    <!--Final Cabecera-->
+    </header>
+
+    <!--Cabecera intro-->
+   <% if flash[:noticia] %>
+    <div class="row">
+      <div class="span10 offset2 alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:noticia] %>
+      </div>
+    </div>
+    <% end %>
+  <% if flash[:error] %>
+    <div class="row">
+      <div class="span10 offset2 alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:error] %>
+      </div>
+    </div>
+    <% end %>  
+
+    <!--Empieza contenido dinamico-->
+    
+      
+        <%= yield %>
+      
+
+   <!--start footer-->
+   <footer>
+      <div class="container">  
+         <div id="FooterTwo"> Probando con Ruby on Rails </div>
+         <div id="FooterTree"> Válido en html5  <a href="http://www.google.com.uy">google</a> </div> 
+      </div>
+   </footer>
+   <!--end footer-->
+   </div>
+   <!--end bg-->
+   <!-- Free template distributed by http://freehtml5templates.com -->
+  </body>
+</html>
+
+

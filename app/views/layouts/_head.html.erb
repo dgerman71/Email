@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+  <title><%= @titulo ||= "Nuestro Sitio - Probando" %></title>
+  <link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script language="javascript">
+  $(document).ready(
+  	function (){
+  		$("#pikame").PikaChoose();
+  	});
+  </script>
